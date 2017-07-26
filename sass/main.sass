@@ -205,20 +205,20 @@ body
     flex-basis: 313px
    
   &__deadline
-    -webkit-flex-basis: 160px 
-    flex-basis: 160px 
+    -webkit-flex-basis: 250px 
+    flex-basis: 250px 
   &__status
-    -webkit-flex-basis: 150px 
-    flex-basis: 150px 
-  &__assigned
     -webkit-flex-basis: 100px 
     flex-basis: 100px 
+  &__assigned
+    -webkit-flex-basis: 200px 
+    flex-basis: 200px 
   &__price
-    -webkit-flex-basis: 160px 
-    flex-basis: 160px 
+    -webkit-flex-basis: 100px 
+    flex-basis: 100px 
   &__id
-    -webkit-flex-basis: 80px 
-    flex-basis: 80px
+    -webkit-flex-basis: 100px 
+    flex-basis: 100px
   
   a
     color: #838c96
@@ -240,6 +240,8 @@ body
   text-align: center
   
   &__status
+    &:first-letter
+      text-transform: uppercase
     &_bidding
       border-left-color: #cceef7
     
@@ -275,26 +277,24 @@ body
     
   
   &__assigned
-    -webkit-flex-basis: 150px 
-    flex-basis: 150px 
-    &.progress, &.canceled
-      display: flex
-      -webkit-justify-content: center
-      justify-content: center
-  &__descr
     display: flex
-    -webkit-flex-direction: column
-    -ms-flex-direction: column
-    flex-direction: column
-    -webkit-justify-content: space-around
-    justify-content: space-around
-    a img
-      padding-left: .5rem
-      padding-right: .5rem
-            
+    -webkit-flex-basis: 100px 
+    flex-basis: 100px
+    // background-color: #999 
+    
+    
+  &__descr
+    padding-top: 5%
+    &_rating
+      padding-top: 15%
+    
+    
   &__price
     -webkit-flex-basis: 70px 
     flex-basis: 70px 
+    &_paid
+      color: #838c96
+      margin-top: 1rem 
 
   &__id
     -webkit-flex-basis: 50px 

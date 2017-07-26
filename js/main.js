@@ -37,8 +37,27 @@ function buildOrder(element) {
 
   order.find('.sprint__timeleft').html(getTimeLeft(element.deadline));
 
+  order.find('.sprint__status').html(isStatusMessage(element.statusMessage));
+
   // build status-bar
-  order.find('.status-bar__inner').css({'width': statusBarWidth})
+  order.find('.status-bar__inner').css({'width': statusBarWidth});
+
+  //build bids
+  if (!element.assigned.name) order.find('.sprint__assigned').html('<p>' +element.bids +' bids</p>');
+
+  //build assigned
+  order.find('.sprint__assigned_photo').html('<a href="#"><img src="'+ element.assigned.icon +'" alt="'+ element.assigned.name +'"></a>');
+  order.find('.sprint__descr_nickname').html('<p>'+ element.assigned.name +'</p>');
+  order.find('.sprint__descr_rating').html('<p>'+ element.assigned.rate +'</p>');
+
+  //build price
+  order.find('.sprint__price_general').html('$'+element.price);
+  order.find('.sprint__price_paid').html('$'+element.paid);
+
+  //build id
+  order.find('.sprint__id').html('<p>#'+ element.id +'</p>');
+
+
 
   order.appendTo('.content__inner');
 }
@@ -59,3 +78,10 @@ function getTimeLeft(deadline) {
 
   return diffResult + ' left';
 }
+
+function isStatusMessage(message){
+  if(message){
+  	return message;
+  }  
+}
+

@@ -11,7 +11,7 @@
             "assigned": {
                   "name": "Nevajno",
                   "rate": "9.8",
-                  "icon": "url.url",
+                  "icon": "img/profile-photo-progress.png",
                   "status": "online"
             },
             "price": "1250",
@@ -49,7 +49,7 @@
             "assigned": {
                   "name": "Schofield",
                   "rate": "8.9",
-                  "icon": "url.url",
+                  "icon": "img/profile-photo-canceled.png",
                   "status": "offline"
             },
             "price": "30",
