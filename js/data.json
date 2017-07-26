@@ -55,5 +55,24 @@
             "price": "30",
             "paid": "0",
             "id": "4745454"
+      },
+      {
+            "title": "Lorem ipsum dolor sit amet? Why is it?",
+            "category": "Psychology and Education, Argumentative essay ",
+            "deadline": "Jul 29, 11:59 AM",
+            "status": "finished",
+            "statusMessage": "",
+            "steps": "1",
+            "currentStep": "1",
+            "bids": "35",
+            "assigned": {
+                  "name": "Mr Nose",
+                  "rate": "9.1",
+                  "icon": "img/profile-photo-canceled.png",
+                  "status": "online"
+            },
+            "price": "1090",
+            "paid": "1001",
+            "id": "5555555"
       }
 ]

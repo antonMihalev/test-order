@@ -17,6 +17,14 @@ function getOrders() {
   });
 }
 
+// function sortElement(sortBy){
+// 	clearContaner();
+// 	console.log(sortBy)
+// }
+
+console.log(app.orders);
+
+
 function parseOrders() {
   app.orders.forEach(function(element){
     buildOrder(element);
@@ -57,10 +65,13 @@ function buildOrder(element) {
   //build id
   order.find('.sprint__id').html('<p>#'+ element.id +'</p>');
 
-
+  // sortElement(orders);
 
   order.appendTo('.content__inner');
 }
+
+
+
 
 function getTimeLeft(deadline) {
   var currentDate = new Date();
@@ -85,3 +96,5 @@ function isStatusMessage(message){
   }  
 }
 
+// $('.sort-list')
+// $('.taskbody')children().remove();

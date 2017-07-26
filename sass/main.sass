@@ -135,7 +135,7 @@ body
     display: flex
     -webkit-justify-content: space-between
     justify-content: space-between
-    padding-top: 4rem
+    padding-top: 3rem
     text-transform: uppercase
     
 .header
@@ -149,21 +149,23 @@ body
       position: relative
       margin-right: 10%
       margin-left: 5%
-      padding-bottom: 2.5rem
+      padding-bottom: .5rem
       font-size: 1.6rem
       
-      a
+      button
         color: $grey
+        text-transform: uppercase
+        padding: 1rem
         
-      &.active a
+      &.active button
         color: $green 
 
       &.active:after
         content: "" 
         position: absolute
-        bottom: 0
-        left: -100%
-        width: 300%
+        bottom: -11%
+        left: -75%
+        width: 250%
         height: 4px 
         background-color: $green
         -webkit-border-radius: 5px 
@@ -172,21 +174,22 @@ body
       &:after
         content: "" 
         position: absolute
-        bottom: 50%
+        bottom: 10%
         left: 50%
         width: 0
-        height: 2px
+        height: 1px
         background-color: $green
-        -webkit-transition: all .8s 
-        -moz-transition: all .8s 
-        -ms-transition: all .8s 
-        -o-transition: all .8s 
-        transition: all .8s  
+        -webkit-transition: all .6s 
+        -moz-transition: all .6s 
+        -ms-transition: all .6s 
+        -o-transition: all .6s 
+        transition: all .6s  
         
       &:hover:after
-        width: 300%
-        left: -100%
-        bottom: 0
+        width: 250%
+        left: -75%
+        bottom: -11%
+        background-color: #101867 
           
   &__sort
 
@@ -222,6 +225,7 @@ body
   
   a
     color: #838c96
+   
     
 .sprint
   display: flex
@@ -248,6 +252,8 @@ body
     &_canceled
       border-left-color: #cfbbaf
       opacity: 0.5
+    &_finished
+      border-left-color: #101867
 
   &__name
     -webkit-flex-basis: 313px 
@@ -323,6 +329,8 @@ body
   background-color: #a6e7f7 
 .sprint__status_canceled .status-bar__inner
   background-color: #cfbbaf
+.sprint__status_finished .status-bar__inner
+  background-color: #101867
     
      
   
