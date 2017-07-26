@@ -239,7 +239,13 @@ body
   border-left-color: #b4d0a9
   text-align: center
   
-  
+  &.bidding
+    border-left-color: #cceef7
+    
+  &.canceled
+    border-left-color: #cfbbaf
+    opacity: 0.8
+
   &__title
     -webkit-flex-basis: 313px 
     flex-basis: 313px 
@@ -304,7 +310,7 @@ body
     width: 0%
     -webkit-border-radius: 5px
     border-radius: 5px
-    background-color: green
+    background-color: $green
     
     
      
