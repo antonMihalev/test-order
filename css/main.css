@@ -175,7 +175,7 @@ body {
   .subheader__status {
     -webkit-flex-basis: 150px;
     flex-basis: 150px; }
-  .subheader__assign {
+  .subheader__assigned {
     -webkit-flex-basis: 100px;
     flex-basis: 100px; }
   .subheader__price {
@@ -201,20 +201,26 @@ body {
   border-radius: 5px;
   border: 2px solid transparent;
   border-left-color: #b4d0a9;
-  text-align: center;
-  text-align: left; }
-  .sprint.bidding {
+  text-align: center; }
+  .sprint__status_bidding {
     border-left-color: #cceef7; }
-  .sprint.canceled {
+  .sprint__status_canceled {
     border-left-color: #cfbbaf;
-    opacity: 0.8; }
-  .sprint__title {
+    opacity: 0.5; }
+  .sprint__name {
     -webkit-flex-basis: 313px;
-    flex-basis: 313px; }
-  .sprint__deadline {
+    flex-basis: 313px;
+    text-align: left; }
+  .sprint__category {
+    color: #838c96;
+    margin-top: 1rem; }
+  .sprint__date {
     -webkit-flex-basis: 120px;
     flex-basis: 120px; }
-  .sprint__status {
+  .sprint__timeleft {
+    margin-top: 1rem;
+    color: #838c96; }
+  .sprint__state {
     -webkit-flex-basis: 163px;
     flex-basis: 163px;
     display: flex;
@@ -223,10 +229,10 @@ body {
     flex-direction: column;
     padding-top: 1rem;
     padding-bottom: 1rem; }
-  .sprint__assign {
+  .sprint__assigned {
     -webkit-flex-basis: 150px;
     flex-basis: 150px; }
-    .sprint__assign.progress, .sprint__assign.canceled {
+    .sprint__assigned.progress, .sprint__assigned.canceled {
       display: flex;
       -webkit-justify-content: center;
       justify-content: center; }
@@ -247,7 +253,7 @@ body {
     -webkit-flex-basis: 50px;
     flex-basis: 50px; }
 
-.loader {
+.status-bar {
   position: relative;
   width: 100%;
   height: 1rem;
@@ -256,7 +262,7 @@ body {
   margin-top: 1rem;
   overflow: hidden;
   background-color: #999; }
-  .loader__inner {
+  .status-bar__inner {
     position: absolute;
     top: 0;
     left: 0;
@@ -265,3 +271,9 @@ body {
     -webkit-border-radius: 5px;
     border-radius: 5px;
     background-color: #76ac5c; }
+
+.sprint__status_bidding .status-bar__inner {
+  background-color: #a6e7f7; }
+
+.sprint__status_canceled .status-bar__inner {
+  background-color: #cfbbaf; }
