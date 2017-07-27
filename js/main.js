@@ -1,5 +1,12 @@
+
+
 $('.header__button_user').on('click', function(e){
-  $('.user-settings').css({'display':'flex'});
+	$('.user-settings').toggle('slow');
+	var $save = $('.header__nav');
+	
+  	if(!$('.user-settings').find($save).length){
+  		$save.clone().appendTo('.user-settings');
+  	}
 });
 
 $(function () {
