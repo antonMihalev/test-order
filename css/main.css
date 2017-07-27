@@ -104,7 +104,7 @@ body {
   padding-right: 2rem; }
   .content:after {
     position: absolute;
-    top: 80px;
+    top: 82px;
     left: 0;
     content: "";
     width: 100%;
@@ -125,42 +125,39 @@ body {
     position: relative;
     margin-right: 10%;
     margin-left: 5%;
-    padding-bottom: .5rem;
-    font-size: 1.6rem; }
-    .header__status_item button {
-      color: #4b3b1a;
-      text-transform: uppercase;
-      padding: 1rem; }
-    .header__status_item.active button {
-      color: #76ac5c; }
-    .header__status_item.active:after {
-      content: "";
-      position: absolute;
-      bottom: -11%;
-      left: -75%;
-      width: 250%;
-      height: 4px;
-      background-color: #76ac5c;
-      -webkit-border-radius: 5px;
-      border-radius: 5px; }
-    .header__status_item:after {
-      content: "";
-      position: absolute;
-      bottom: 10%;
-      left: 50%;
-      width: 0;
-      height: 1px;
-      background-color: #76ac5c;
-      -webkit-transition: all .6s;
-      -moz-transition: all .6s;
-      -ms-transition: all .6s;
-      -o-transition: all .6s;
-      transition: all .6s; }
-    .header__status_item:hover:after {
-      width: 250%;
-      left: -75%;
-      bottom: -11%;
-      background-color: #101867; }
+    padding-bottom: .5rem; }
+  .header__status_btn {
+    color: #4b3b1a;
+    text-transform: uppercase;
+    padding: 1rem;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 1.6rem;
+    -webkit-transition: all .9s;
+    -moz-transition: all .9s;
+    -ms-transition: all .9s;
+    -o-transition: all .9s;
+    transition: all .6s; }
+    .header__status_btn.active {
+      color: #76ac5c;
+      -webkit-transition: all .9s;
+      -moz-transition: all .9s;
+      -ms-transition: all .9s;
+      -o-transition: all .9s;
+      transition: all .9s; }
+      .header__status_btn.active:after {
+        content: "";
+        position: absolute;
+        bottom: -11%;
+        left: -75%;
+        width: 250%;
+        height: 4px;
+        background-color: #76ac5c;
+        -webkit-border-radius: 5px;
+        border-radius: 5px; }
 
 .subheader {
   display: flex;

@@ -124,7 +124,7 @@ body
   padding-right: 2rem
   &:after
     position: absolute
-    top: 80px
+    top: 82px
     left: 0
     content: ""
     width: 100%
@@ -137,7 +137,8 @@ body
     justify-content: space-between
     padding-top: 3rem
     text-transform: uppercase
-    
+
+   
 .header
 
   &__status
@@ -150,46 +151,62 @@ body
       margin-right: 10%
       margin-left: 5%
       padding-bottom: .5rem
-      font-size: 1.6rem
       
-      button
-        color: $grey
-        text-transform: uppercase
-        padding: 1rem
-        
-      &.active button
-        color: $green 
-
-      &.active:after
-        content: "" 
-        position: absolute
-        bottom: -11%
-        left: -75%
-        width: 250%
-        height: 4px 
-        background-color: $green
-        -webkit-border-radius: 5px 
-        border-radius: 5px 
+    &_btn
+      color: $grey
+      text-transform: uppercase
+      padding: 1rem
+      -webkit-border-radius: 5px 
+      border-radius: 5px
+      background-color: transparent
+      border-color: transparent
+      cursor: pointer
+      font-size: 1.6rem
+      -webkit-transition: all .9s 
+      -moz-transition: all .9s 
+      -ms-transition: all .9s 
+      -o-transition: all .9s 
+      transition: all .6s 
+      
+      
+      &.active
+        color: $green
+        -webkit-transition: all .9s 
+        -moz-transition: all .9s 
+        -ms-transition: all .9s 
+        -o-transition: all .9s 
+        transition: all .9s 
+  
+        &:after
+          content: "" 
+          position: absolute
+          bottom: -11%
+          left: -75%
+          width: 250%
+          height: 4px 
+          background-color: $green
+          -webkit-border-radius: 5px 
+          border-radius: 5px 
          
-      &:after
-        content: "" 
-        position: absolute
-        bottom: 10%
-        left: 50%
-        width: 0
-        height: 1px
-        background-color: $green
-        -webkit-transition: all .6s 
-        -moz-transition: all .6s 
-        -ms-transition: all .6s 
-        -o-transition: all .6s 
-        transition: all .6s  
+      // &:after
+      //   content: "" 
+      //   position: absolute
+      //   bottom: 10%
+      //   left: 50%
+      //   width: 0
+      //   height: 1px
+      //   background-color: $green
+      //   -webkit-transition: all .6s 
+      //   -moz-transition: all .6s 
+      //   -ms-transition: all .6s 
+      //   -o-transition: all .6s 
+      //   transition: all .6s  
         
-      &:hover:after
-        width: 250%
-        left: -75%
-        bottom: -11%
-        background-color: #101867 
+      // &:hover:after
+      //   width: 250%
+      //   left: -75%
+      //   bottom: -11%
+      //   background-color: #101867 
           
   &__sort
 

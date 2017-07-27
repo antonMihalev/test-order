@@ -157,6 +157,11 @@ function clearContainer(){
 
 $('.header__status_btn').on('click', function(e){
   getStatusOrders($(this).data('sort'));
+
+  e.preventDefault();
+  $(".header__status_btn").removeClass('active');
+  $(this).addClass('active');
+  // alert($('.header__status_btn'));
 });
 
 function customSelectInit() {
