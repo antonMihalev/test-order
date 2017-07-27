@@ -93,6 +93,26 @@ body {
     .header__button a {
       font-size: 1.4rem;
       text-transform: uppercase; }
+    .header__button_user {
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      background-color: transparent;
+      cursor: pointer; }
+
+.user-settings {
+  display: flex;
+  margin: .5rem auto;
+  width: 50%;
+  background: #daa745;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  padding: 1rem;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; }
+  .user-settings li a {
+    text-transform: uppercase; }
+    .user-settings li a:hover {
+      color: white; }
 
 .content_wrapper {
   width: 100%;
@@ -141,18 +161,18 @@ body {
     border-color: transparent;
     cursor: pointer;
     font-size: 1.6rem;
-    -webkit-transition: all .9s;
-    -moz-transition: all .9s;
-    -ms-transition: all .9s;
-    -o-transition: all .9s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
     transition: all .6s; }
     .header__status_btn.active {
       color: #76ac5c;
-      -webkit-transition: all .9s;
-      -moz-transition: all .9s;
-      -ms-transition: all .9s;
-      -o-transition: all .9s;
-      transition: all .9s; }
+      -webkit-transition: all .6s;
+      -moz-transition: all .6s;
+      -ms-transition: all .6s;
+      -o-transition: all .6s;
+      transition: all .6s; }
       .header__status_btn.active:after {
         content: "";
         position: absolute;

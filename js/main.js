@@ -1,3 +1,7 @@
+$('.header__button_user').on('click', function(e){
+  $('.user-settings').css({'display':'flex'});
+});
+
 $(function () {
   app.init();
   customSelectInit();
@@ -159,7 +163,7 @@ $('.header__status_btn').on('click', function(e){
   getStatusOrders($(this).data('sort'));
 
   e.preventDefault();
-  $(this).removeClass('active');
+  $('.header__status_btn').removeClass('active');
   $(this).addClass('active');
 });
 

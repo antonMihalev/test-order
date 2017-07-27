@@ -111,6 +111,30 @@ body
     a
       font-size: 1.4rem
       text-transform: uppercase
+      
+    &_user
+      -webkit-border-radius: 5px 
+      border-radius: 5px
+      background-color: transparent
+      // border-color: transparent
+      cursor: pointer
+    
+.user-settings
+  display: flex
+  margin: .5rem auto
+  width: 50%
+  background: darken($header-color,5%) 
+  -webkit-justify-content: space-around
+  justify-content: space-around
+  padding: 1rem
+  -webkit-border-radius: 10px
+  border-radius: 10px
+  li
+    a
+      text-transform: uppercase
+      &:hover
+        color: white 
+      
 
 // ----------CONTENT--------------
 
@@ -167,20 +191,20 @@ body
       border-color: transparent
       cursor: pointer
       font-size: 1.6rem
-      -webkit-transition: all .9s 
-      -moz-transition: all .9s 
-      -ms-transition: all .9s 
-      -o-transition: all .9s 
+      -webkit-transition: all .6s 
+      -moz-transition: all .6s 
+      -ms-transition: all .6s 
+      -o-transition: all .6s 
       transition: all .6s 
       
       
       &.active
         color: $green
-        -webkit-transition: all .9s 
-        -moz-transition: all .9s 
-        -ms-transition: all .9s 
-        -o-transition: all .9s 
-        transition: all .9s 
+        -webkit-transition: all .6s 
+        -moz-transition: all .6s 
+        -ms-transition: all .6s 
+        -o-transition: all .6s 
+        transition: all .6s 
   
         &:after
           content: "" 
