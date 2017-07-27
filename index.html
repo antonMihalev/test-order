@@ -43,12 +43,19 @@
   	<!-- -------------CONTENT HEADER----------- -->
   	  <div class="content__header header">
   	  	<ul class="header__status">
-  	  	  <li class="header__status_item active"><button type="button" appearence="none">recent</button></li>
-  	  	  <li class="header__status_item"><button type="button" appearence="none">finished</button></li>
-  	  	  <li class="header__status_item"><button type="button" appearence="none">canceled</button></li>
+  	  	  <li class="header__status_item active"><button class="header__status_btn" type="button" data-sort="recent">recent</button></li>
+  	  	  <li class="header__status_item"><button class="header__status_btn" type="button" data-sort="finished">finished</button></li>
+  	  	  <li class="header__status_item"><button class="header__status_btn" type="button" data-sort="canceled">canceled</button></li>
   	  	</ul>
 		<div class="header__sort">
-		  <a href="#">sorted by id<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+		  <select name="sort-select" id="sort-select">
+			<option value="none" disabled="" selected="">Sorted by ...</option> 
+			<option value="id">Sorted by ID</option>
+			<option value="deadline">Sorted by Deadline</option>
+			<option value="price">Sorted by Price</option>
+		  </select>
+
+		  <!-- <a href="#">sorted by id<i class="fa fa-angle-down" aria-hidden="true"></i></a> -->
 		</div>
   	  </div>
 

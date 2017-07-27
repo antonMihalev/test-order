@@ -1,5 +1,6 @@
 $(function () {
   app.init();
+  customSelectInit();
 });
 
 var app = {
@@ -28,6 +29,7 @@ console.log(app.orders);
 function parseOrders() {
   app.orders.forEach(function(element){
     buildOrder(element);
+
   });
 }
 
@@ -65,12 +67,8 @@ function buildOrder(element) {
   //build id
   order.find('.sprint__id').html('<p>#'+ element.id +'</p>');
 
-  // sortElement(orders);
-
   order.appendTo('.content__inner');
 }
-
-
 
 
 function getTimeLeft(deadline) {
@@ -96,5 +94,82 @@ function isStatusMessage(message){
   }  
 }
 
+function getStatusOrders(status){
+ 
+  if (status == 'recent') {
+    getRecentOrders();
+    // alert(status+'status in "if"')
+    return;
+  }
+
+  clearContainer();
+
+  app.orders.forEach(function(element){
+  	// alert(element.status)
+    if (element.status === status){
+      buildOrder(element);
+      // alert(buildOrder(element));
+    } 
+  	// alert(app.orders.status)
+  	console.log(element.status)
+  	
+  });
+}
+
+function getRecentOrders() {
+  clearContainer();
+
+  var recent = app.orders.sort(function(a, b) {
+    var aDate = new Date(a.createDate);
+    var bDate = new Date(b.createDate);
+    return bDate - aDate;
+  });
+   // alert(recent+'statussss')
+
+  recent.forEach(function(element) {
+    buildOrder(element);
+  }, this);
+}
+
+function sortElementsBy(sortBy) {
+  var sortedArray = [];
+  // 'id', 'deadline', 'price'
+    if (sortBy == 'deadline') {
+    sortedArray = app.orders.sort(function(a,b){
+      return new Date(b[sortBy]) - new Date(a[sortBy]);
+    });
+  } else {
+    sortedArray = app.orders.sort(function(a,b){
+      return a[sortBy] - b[sortBy];
+    });
+  }
+   
+  clearContainer();
+
+  sortedArray.forEach(function(el){
+    buildOrder(el);
+  });
+}
+
+function clearContainer(){
+  $('.content__inner').children().remove();
+}
+
+$('.header__status_btn').on('click', function(e){
+  getStatusOrders($(this).data('sort'));
+});
+
+function customSelectInit() {
+  var $selectBox = $('#sort-select');
+
+  $selectBox.select2({
+    minimumResultsForSearch: Infinity
+  });
+
+  $selectBox.on("select2:select", function (e) { 
+    sortElementsBy(e.params.data.id);
+    // alert(e.params.data.id);
+  });
+}
 // $('.sort-list')
 // $('.taskbody')children().remove();
