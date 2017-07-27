@@ -100,9 +100,14 @@ body
     
   &__button
     padding: 1rem .8rem
-    background-color: $header_color
+    background-color: transparent
+    border-color: transparent
+    -webkit-border-radius: 5px
+    border-radius: 5px 
     -webkit-box-shadow: 0px 0px 5px grey 
-    box-shadow: 0px 0px 5px grey 
+    box-shadow: 0px 0px 5px grey
+    &:hover
+      box-shadow: 1px 1px 5px grey 
     a
       font-size: 1.4rem
       text-transform: uppercase
@@ -188,26 +193,6 @@ body
           -webkit-border-radius: 5px 
           border-radius: 5px 
          
-      // &:after
-      //   content: "" 
-      //   position: absolute
-      //   bottom: 10%
-      //   left: 50%
-      //   width: 0
-      //   height: 1px
-      //   background-color: $green
-      //   -webkit-transition: all .6s 
-      //   -moz-transition: all .6s 
-      //   -ms-transition: all .6s 
-      //   -o-transition: all .6s 
-      //   transition: all .6s  
-        
-      // &:hover:after
-      //   width: 250%
-      //   left: -75%
-      //   bottom: -11%
-      //   background-color: #101867 
-          
   &__sort
 
 .content__inner
